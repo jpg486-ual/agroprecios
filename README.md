@@ -1,6 +1,6 @@
 # Agroprecios
 
-Aplicacion web para consultar subastas agricolas y sus precios historicos.
+Aplicación web para consultar subastas agrícolas y sus precios históricos.
 
 Este repositorio incluye:
 
@@ -12,7 +12,7 @@ La carpeta scripts contiene utilidades de scraping y no forma parte del desplieg
 
 ## Arquitectura
 
-| Capa | Tecnologia | Puerto local | Funcion |
+| Capa | Tecnología | Puerto local | Función |
 | --- | --- | --- | --- |
 | Frontend | Angular + Nginx | 4200 | Interfaz web |
 | Backend | Spring Boot | 8080 | API REST bajo /api |
@@ -24,7 +24,7 @@ La carpeta scripts contiene utilidades de scraping y no forma parte del desplieg
 
 - Docker Desktop con Compose habilitado.
 
-### Para ejecucion local sin Docker
+### Para ejecución local sin Docker
 
 - Node.js 22+
 - npm
@@ -32,9 +32,9 @@ La carpeta scripts contiene utilidades de scraping y no forma parte del desplieg
 - Maven Wrapper incluido
 - PostgreSQL 16+
 
-## Ejecucion rapida con Docker Compose
+## Ejecución rápida con Docker Compose
 
-Desde la raiz del proyecto:
+Desde la raíz del proyecto:
 
     docker compose up -d --build
 
@@ -48,7 +48,7 @@ Parar servicios:
 
     docker compose down
 
-Parar y eliminar tambien el volumen de datos:
+Parar y eliminar también el volumen de datos:
 
     docker compose down -v
 
@@ -65,14 +65,14 @@ Ver logs en vivo:
 ### Frontend
 
 - Build de Angular en una etapa Node.
-- Publicacion de estaticos en Nginx.
+- Publicación de estáticos en Nginx.
 - Soporte de rutas SPA con fallback a index.html.
 
 ### Backend
 
-- Build con Maven en etapa de compilacion.
-- Imagen final con JRE 17 para ejecucion.
-- Conexion a PostgreSQL mediante variables de entorno.
+- Build con Maven en etapa de compilación.
+- Imagen final con JRE 17 para ejecución.
+- Conexión a PostgreSQL mediante variables de entorno.
 
 ### Base de datos
 
@@ -94,11 +94,11 @@ Valores por defecto en Compose:
 - DB_USERNAME=postgres
 - DB_PASSWORD=postgres
 
-## Ejecucion local sin Docker
+## Ejecución local sin Docker
 
 ## 1) Base de datos PostgreSQL
 
-Crear una base de datos llamada agroprecios y configurar usuario/clave segun tus variables.
+Crear una base de datos llamada agroprecios y configurar usuario/clave según tus variables.
 
 ## 2) Backend
 
@@ -123,13 +123,13 @@ Modo desarrollo:
 
     npm start
 
-Build produccion:
+Build producción:
 
     npm run build
 
-## Inicializacion de datos
+## Inicialización de datos
 
-El backend carga datos semilla automaticamente cuando detecta tablas vacias.
+El backend carga datos semilla automáticamente cuando detecta tablas vacías.
 
 Archivo de seed:
 
@@ -159,6 +159,6 @@ Luego reconstruye:
 
 Revisa:
 
-- Que db este healthy: docker compose ps
+- Que db esté healthy: docker compose ps
 - Que DB_URL use el host db dentro de Docker
 - Que usuario y clave coincidan
