@@ -1,0 +1,84 @@
+.listing-heading {
+  font-size: 38pt;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.listing-location {
+  font-size: 16pt;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+.listing-features > .section-heading {
+  color: var(--secondary-color);
+  font-size: 20pt;
+  margin-bottom: 15px;
+}
+.listing-features {
+  margin-bottom: 20px;
+}
+
+.date-navigation {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.auction-board {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 1px;
+  background-color: white;
+}
+
+.auction-board td {
+  padding: 10px 12px;
+  background: white;
+  text-align: left;
+  border-bottom: 1px solid var(--shadow-color);
+}
+
+.familia-row td {
+  background: var(--accent-color);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.familia-cell {
+  min-width: 260px;
+  padding-left: 28px;
+}
+
+.num-cell,
+.precio-cell {
+  width: 70px;
+  text-align: center;
+}
+
+.producto-cell {
+  min-width: 260px;
+  padding-left: 16px;
+}
+
+.producto-row.clickable {
+  cursor: pointer;
+}
+
+.producto-row.clickable:hover td {
+  background: var(--accent-color);
+}
+
+@media (max-width: 1024px) {
+  .listing-heading {
+    font-size: 28pt;
+  }
+
+  .familia-cell,
+  .producto-cell {
+    min-width: 220px;
+  }
+}
